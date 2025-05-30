@@ -13,8 +13,6 @@ panic-halt = "0.2"
 
 # Raspberry Pi Pico (RP2040) support
 rp-pico = "0.8"
-rp2040-hal = { version = "0.10", features = ["rt", "critical-section-impl"] }
-rp2040-boot2 = "0.3"
 
 # Defmt logging
 defmt = "0.3"
