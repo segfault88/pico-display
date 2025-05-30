@@ -1,0 +1,12 @@
+[build]
+target = "thumbv6m-none-eabi"
+
+[target.thumbv6m-none-eabi]
+# Uncomment the line below when using probe-rs or similar tools
+# runner = "probe-rs run --chip RP2040 --protocol swd"
+rustflags = [
+  "-C", "linker=flip-link",
+]
+
+[unstable]
+build-std = ["core", "panic_abort"] 

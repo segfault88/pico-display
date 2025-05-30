@@ -1,0 +1,27 @@
+[package]
+name = "pico-display"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cortex-m = "0.7"
+cortex-m-rt = "0.7"
+embedded-hal = { version = "0.2.5", features = ["unproven"] }
+embedded-time = "0.12"
+nb = "0.1.2"
+panic-halt = "0.2"
+
+# Raspberry Pi Pico (RP2040) support
+rp-pico = "0.8"
+rp2040-hal = { version = "0.10", features = ["rt", "critical-section-impl"] }
+rp2040-boot2 = "0.3"
+
+# Defmt logging
+defmt = "0.3"
+defmt-rtt = "0.4"
+
+[build-dependencies]
+flip-link = "0.1"
+
+[profile.release]
+debug = 2
