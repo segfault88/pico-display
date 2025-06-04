@@ -24,7 +24,7 @@ use pio_programs::{Rgb, rainbow};
 
 // Configuration for the LED strip
 const NUM_LEDS: usize = 8; // Change this to match your LED strip length
-const LED_PIN: u8 = 2;     // GPIO pin connected to the LED strip data line
+const LED_PIN: u8 = 20;    // GPIO pin connected to the LED strip data line
 
 #[entry]
 fn main() -> ! {
@@ -78,7 +78,7 @@ fn main() -> ! {
         .build(sm0);
 
     // Configure the LED data pin for PIO output
-    let _led_data_pin = pins.gpio2.into_mode::<bsp::hal::gpio::FunctionPio0>();
+    let _led_data_pin = pins.gpio20.into_mode::<bsp::hal::gpio::FunctionPio0>();
     
     // Start the PIO state machine
     let _sm = sm.start();
